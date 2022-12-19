@@ -17,4 +17,6 @@
     <string name="deepl_translate">DeepL翻译</string>
     <string name="next_step">下一步</string>
     <string name="finish">完成！</string>
+    <string name="well_done">完成啦！</string>
+    <string name="finish_descr">氩极随时译已经配置完成啦！开始使用吧！</string>
 </resources>

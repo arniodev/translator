@@ -16,4 +16,6 @@
     <string name="deepl_translate">DeepL</string>
     <string name="next_step">Next Step</string>
     <string name="finish">Finish!</string>
+    <string name="well_done">Well Done!</string>
+    <string name="finish_descr">Everything is OK. Enjoy your time with ArTranslator now!</string>
 </resources>

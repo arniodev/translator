@@ -1,5 +1,6 @@
 package com.arniodev.translator
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -33,10 +34,13 @@ class EngineChoosingActivity : AppCompatActivity() {
         engineRecyclerView.addItemDecoration(RecyclerDecoration())
 
         nextBtnView.setOnClickListener {
-            if( arrowView.alpha == 1F) {
+            if( arrowView.alpha == 1F ) {
                 prefs.edit {
                     putString("engine", adapter.getEngine())
                 }
+                val intent = Intent(this,InitFinishedActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }

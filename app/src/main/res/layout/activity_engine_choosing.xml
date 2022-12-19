@@ -141,8 +141,6 @@
                                 android:alpha=".56"
                                 android:src="@drawable/next_step" />
 
-
-
                         </RelativeLayout>
 
                     </LinearLayout>
