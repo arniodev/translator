@@ -1,4 +1,4 @@
-package com.arniodev.translator
+package com.arniodev.translator.ui
 
 import android.graphics.Rect
 import android.view.View

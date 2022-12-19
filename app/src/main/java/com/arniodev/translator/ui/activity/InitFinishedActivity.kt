@@ -1,9 +1,10 @@
-package com.arniodev.translator
+package com.arniodev.translator.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
+import com.arniodev.translator.R
 
 class InitFinishedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

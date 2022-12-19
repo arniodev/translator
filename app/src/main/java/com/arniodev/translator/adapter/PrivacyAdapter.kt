@@ -1,4 +1,4 @@
-package com.arniodev.translator
+package com.arniodev.translator.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,16 +6,22 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.arniodev.translator.R
+import com.arniodev.translator.data.PrivacyItem
 
 class PrivacyAdapter(private val privacyList: List<PrivacyItem>) : RecyclerView.Adapter<PrivacyAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val privacyIcon : ImageView = view.findViewById(R.id.privacy_icon)
-        val privacyName : TextView = view.findViewById(R.id.privacy_name)
+        val privacyIcon: ImageView = view.findViewById(R.id.privacy_icon)
+        val privacyName: TextView = view.findViewById(R.id.privacy_name)
         val privacyDescr: TextView = view.findViewById(R.id.privacy_descr)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.privacy_list_item, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
+        LayoutInflater.from(parent.context).inflate(
+            R.layout.privacy_list_item, parent, false
+        )
+    )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = privacyList[position]

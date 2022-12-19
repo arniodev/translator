@@ -1,4 +1,4 @@
-package com.arniodev.translator
+package com.arniodev.translator.ui.activity
 
 import android.app.ActivityOptions
 import android.content.Context
@@ -10,6 +10,7 @@ import android.os.Message
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.arniodev.translator.R
 
 class InitialActivity : AppCompatActivity() {
 
@@ -33,8 +34,14 @@ class InitialActivity : AppCompatActivity() {
                 }
                 SHOW_TAP_BUTTON -> {
                     tapView.setOnClickListener {
-                        val intent = Intent(_CONTEXT,PrivacyActivity::class.java)
-                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this@InitialActivity,findViewById<View>(R.id.init_activity_view),"TapToStart").toBundle())
+                        val intent = Intent(_CONTEXT, PrivacyActivity::class.java)
+                        startActivity(
+                            intent, ActivityOptions.makeSceneTransitionAnimation(
+                                this@InitialActivity, findViewById<View>(
+                                    R.id.init_activity_view
+                                ), "TapToStart"
+                            ).toBundle()
+                        )
 
                         tapView.visibility = ViewGroup.GONE
                         exampleView.visibility = ViewGroup.GONE

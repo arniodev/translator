@@ -1,11 +1,15 @@
-package com.arniodev.translator
+package com.arniodev.translator.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.arniodev.translator.R
+import com.arniodev.translator.adapter.PrivacyAdapter
+import com.arniodev.translator.data.PrivacyItem
+import com.arniodev.translator.ui.RecyclerDecoration
 
 class PrivacyActivity : AppCompatActivity() {
 
@@ -30,7 +34,7 @@ class PrivacyActivity : AppCompatActivity() {
             finish()
         }
         agreePrivacyView.setOnClickListener {
-            val intent = Intent(applicationContext,EngineChoosingActivity::class.java)
+            val intent = Intent(applicationContext, EngineChoosingActivity::class.java)
             startActivity(intent)
             finish()
         }
