@@ -26,6 +26,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -90,13 +91,13 @@ class EngineChoosingActivity : AppCompatActivity() {
                             .size(24.dp)
                     )
                     Text(
-                        text = "选择翻译引擎",
+                        text = stringResource(id = R.string.translation_engine),
                         color = Color.White,
                         fontFamily = gooLiPuhuiSansFamily,
                         fontSize = 18.sp
                     )
                     Text(
-                        text = "选择您的翻译引擎以继续\n稍后可以在设置里更改",
+                        text = stringResource(id = R.string.engine_descr),
                         color = Color.White,
                         fontFamily = gooLiPuhuiSansFamily,
                         fontSize = 12.sp, modifier = Modifier.alpha(0.6f)
@@ -138,7 +139,7 @@ class EngineChoosingActivity : AppCompatActivity() {
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = "下一步",
+                            text = stringResource(id = R.string.next_step),
                             color = Color.White,
                             fontSize = 13.sp,
                             fontFamily = gooLiPuhuiSansFamily,
