@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">氩极随时译</string>
+    <string name="welcome">欢迎使用</string>
+    <string name="welcome_translation">Welcome to</string>
+    <string name="app_name_translation">ArTranslator</string>
+    <string name="translated">已翻译</string>
+    <string name="tap_to_start">轻按开始</string>
+    <string name="privacy">隐私</string>
+    <string name="privacy_descr">我们尊重您的隐私。当您使用我们的服务时，我们需要以下权限。您的数据不会被泄露。</string>
+    <string name="internet_connection">网络连接</string>
+    <string name="internet_connection_descr">我们需要从互联网上获取您需要的翻译内容。</string>
+    <string name="i_agree">我同意</string>
+    <string name="translation_engine">翻译引擎</string>
+    <string name="engine_descr">选择您的翻译引擎以继续，您可以稍后在设置中更改。</string>
+    <string name="google_translate">Google翻译</string>
+    <string name="deepl_translate">DeepL翻译</string>
+    <string name="next_step">下一步</string>
+    <string name="finish">完成！</string>
+</resources>

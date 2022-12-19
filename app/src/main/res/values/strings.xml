@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ArTranslator</string>
+    <string name="welcome">Welcome to</string>
+    <string name="welcome_translation">欢迎使用</string>
+    <string name="app_name_translation">氩极随时译</string>
+    <string name="translated">Translated</string>
+    <string name="tap_to_start">Tap to Start</string>
+    <string name="privacy">Privacy</string>
+    <string name="privacy_descr">We respect your privacy. We need these permissions below when we provide the services to you. We won\'t leak your personal data.</string>
+    <string name="internet_connection">Internet</string>
+    <string name="internet_connection_descr">We need to get translation contents from the Internet.</string>
+    <string name="i_agree">I Agree</string>
+    <string name="translation_engine">Translation Engine</string>
+    <string name="engine_descr">Please choose the translation engine to continue. You can change it later in the settings.</string>
+    <string name="google_translate">Google</string>
+    <string name="deepl_translate">DeepL</string>
+    <string name="next_step">Next Step</string>
+    <string name="finish">Finish!</string>
+</resources>

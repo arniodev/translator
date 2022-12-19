@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/ArTranslator/app/src/main/res/drawable/ic_launcher.xml" value="0.2265" />
+        <entry key="..\:/ArTranslator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1915" />
+        <entry key="..\:/ArTranslator/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1955" />
+        <entry key="..\:/ArTranslator/app/src/main/res/drawable/init_translation_background.xml" value="0.1955" />
+        <entry key="..\:/ArTranslator/app/src/main/res/drawable/tap_to_start_btn.xml" value="0.1955" />
+        <entry key="..\:/ArTranslator/app/src/main/res/drawable/translation.xml" value="0.1955" />
+        <entry key="..\:/ArTranslator/app/src/main/res/layout/activity_initial.xml" value="0.7555555555555555" />
+        <entry key="..\:/ArTranslator/app/src/main/res/layout/activity_launcher.xml" value="0.5862068965517241" />
+        <entry key="..\:/ArTranslator/app/src/main/res/layout/activity_privacy.xml" value="0.6471354166666666" />
+        <entry key="..\:/ArTranslator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
