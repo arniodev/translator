@@ -2,6 +2,7 @@ package com.arniodev.translator.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.AnimatedVisibility
@@ -122,6 +123,9 @@ class EngineChoosingActivity : AppCompatActivity() {
                             .alpha(buttonAlpha)
                             .clickVfx {
                                 if (currentEngine.isNotEmpty()) {
+
+                                    Log.d("ArT", currentEngine)
+
                                     prefs.edit {
                                         putString("engine", currentEngine)
                                     }
