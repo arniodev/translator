@@ -18,7 +18,6 @@ class InitialActivity : AppCompatActivity() {
     private val SHOW_TAP_BUTTON = 0x0002
     private val  SHOW_BACK_BUTTON = 0x0003
     private lateinit var _CONTEXT: Context
-
     private val handler = object : Handler(Looper.getMainLooper()){
 
         override fun handleMessage(msg: Message) {
@@ -45,6 +44,8 @@ class InitialActivity : AppCompatActivity() {
 
                         tapView.visibility = ViewGroup.GONE
                         exampleView.visibility = ViewGroup.GONE
+
+                        finish()
                     }
                     tapView.visibility = ViewGroup.VISIBLE
                 }

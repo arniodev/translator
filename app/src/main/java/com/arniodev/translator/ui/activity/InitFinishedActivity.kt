@@ -12,14 +12,14 @@ class InitFinishedActivity : AppCompatActivity() {
         setContentView(R.layout.activity_init_finished)
 
         val finishedLayout = findViewById<View>(R.id.finished_layout)
-        val prefs = getSharedPreferences("config", MODE_PRIVATE)
+        val prefs = getSharedPreferences("config", MODE_PRIVATE).edit()
 
         finishedLayout.setOnClickListener {
-            prefs.edit {
-                putBoolean("configured",true)
-            }
+            prefs.putBoolean("configured", true)
+            prefs.apply()
             finish()
-            TODO("Start MainActivity")
+
+            //TODO("Start MainActivity")
         }
     }
 }

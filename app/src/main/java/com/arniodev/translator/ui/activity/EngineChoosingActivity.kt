@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBackIos
 import androidx.compose.material.icons.outlined.Key
+import androidx.compose.material.icons.outlined.SettingsSuggest
 import androidx.compose.material.icons.rounded.ArrowForwardIos
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -85,7 +86,7 @@ class EngineChoosingActivity : AppCompatActivity() {
                     horizontalAlignment = if (isRound()) Alignment.CenterHorizontally else Alignment.Start
                 ) {
                     Icon(
-                        imageVector = Icons.Outlined.Key,
+                        imageVector = Icons.Outlined.SettingsSuggest,
                         contentDescription = null,
                         modifier = Modifier
                             .size(24.dp)
@@ -139,7 +140,7 @@ class EngineChoosingActivity : AppCompatActivity() {
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = stringResource(id = R.string.next_step),
+                            text = stringResource(id = R.string.finish),
                             color = Color.White,
                             fontSize = 13.sp,
                             fontFamily = gooLiPuhuiSansFamily,
