@@ -12,21 +12,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:background="@drawable/translate_background"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/quick_translate"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:gravity="center_vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginStart="25dp"
-                    android:layout_marginEnd="25dp">
+                    android:layout_marginEnd="10dp">
 
                     <ImageView
                         android:layout_width="30dp"
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_marginStart="25dp"
-                    android:layout_marginEnd="25dp"
+                    android:layout_marginEnd="10dp"
                     android:alpha=".55">
 
                     <ImageView
@@ -108,7 +108,7 @@
         </LinearLayout>
 
         <!-- TODO: Language Choosing -->
-        
+
     </LinearLayout>
 
 </FrameLayout>
