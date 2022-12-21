@@ -23,7 +23,6 @@ class MainFragment : Fragment() {
         super.onStart()
         val prefs = activity?.getSharedPreferences("config", AppCompatActivity.MODE_PRIVATE)
         val engine = prefs?.getString("engine","DeepL")
-        Log.d("ArT",engine.toString())
         val poweredByView = view?.findViewById<View>(R.id.powered_by_who) as TextView
         val text = getString(when(engine) {
             "Google" -> R.string.powered_by_Google

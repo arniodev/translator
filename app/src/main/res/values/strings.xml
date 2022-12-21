@@ -19,9 +19,9 @@
     <string name="well_done">Well Done!</string>
     <string name="finish_descr">Everything is OK. Enjoy your time with ArTranslator now!</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="translate_from_text">Translate from Text</string>
+    <string name="translate_from_text">From Text</string>
     <string name="powered_by_Google">Powered By Google</string>
     <string name="powered_by_DeepL">Powered By DeepL</string>
-    <string name="translate_from_speech">Translate from Speech</string>
+    <string name="translate_from_speech">From Speech</string>
     <string name="service_unavailable">Service Unavailable</string>
 </resources>
