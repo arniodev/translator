@@ -24,5 +24,7 @@
     <string name="powered_by_DeepL">Powered By DeepL</string>
     <string name="translate_from_speech">From Speech</string>
     <string name="service_unavailable">Service Unavailable</string>
+    <string name="to">To English</string>
+    <string name="from">From Simplified Chinese</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

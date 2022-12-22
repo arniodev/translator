@@ -24,4 +24,6 @@
     <string name="powered_by_Google">由 谷歌 驱动</string>
     <string name="translate_from_speech">语音翻译</string>
     <string name="service_unavailable">服务不可用</string>
+    <string name="to">到</string>
+    <string name="from">从</string>
 </resources>

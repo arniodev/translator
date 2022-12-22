@@ -156,7 +156,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/item_background">
 
-                <!-- TODO: replace this fragment to viewPager2 or RecyclerView -->
+                <include layout="@layout/homepage_item"/>
 
             </LinearLayout>
 
