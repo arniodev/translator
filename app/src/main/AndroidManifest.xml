@@ -19,16 +19,10 @@
         <activity
             android:name=".ui.activity.InitFinishedActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".ui.activity.EngineChoosingActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".ui.activity.PrivacyActivity"
