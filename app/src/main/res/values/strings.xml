@@ -24,4 +24,5 @@
     <string name="powered_by_DeepL">Powered By DeepL</string>
     <string name="translate_from_speech">From Speech</string>
     <string name="service_unavailable">Service Unavailable</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -40,17 +40,129 @@
 
         </RelativeLayout>
 
-        <androidx.fragment.app.FragmentContainerView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:id="@+id/main_frag"
-            android:name="com.arniodev.translator.ui.fragment.MainFragment"/>
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp">
 
-        <!-- TODO: replace this fragment to viewPager2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="75"
+                android:background="@drawable/translate_background"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/quick_translate"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/translation_white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:text="@string/translate_from_text"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/powered_by_who"
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:alpha=".55"
+                                android:textColor="@color/white"
+                                android:textSize="8sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8.5"
+                    android:id="@+id/voice_translate"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:alpha=".55">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/voice"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:textColor="@color/white"
+                                android:text="@string/translate_from_speech"
+                                android:textSize="9sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="10dp"
+                                android:alpha=".55"
+                                android:textColor="@color/white"
+                                android:textSize="7sp"
+                                android:text="@string/service_unavailable"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="33"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/item_background">
+
+                <!-- TODO: replace this fragment to viewPager2 or RecyclerView -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
