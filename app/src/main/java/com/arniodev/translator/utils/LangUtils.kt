@@ -10,7 +10,7 @@ object LangUtils {
         else -> R.string.en
     }
 
-    fun getEngine(engine: String) = when(engine) {
+    fun getEnginePoweredBy(engine: String) = when(engine) {
         "Google" -> R.string.powered_by_Google
         "DeepL" -> R.string.powered_by_DeepL
         else -> R.string.powered_by_DeepL

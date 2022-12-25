@@ -20,8 +20,8 @@
     <string name="well_done">完成啦！</string>
     <string name="finish_descr">氩极随时译已经配置完成啦！开始使用吧！</string>
     <string name="translate_from_text">文本翻译</string>
-    <string name="powered_by_DeepL">由 DeepL翻译 驱动</string>
-    <string name="powered_by_Google">由 谷歌翻译 驱动</string>
+    <string name="powered_by_DeepL">由DeepL翻译驱动</string>
+    <string name="powered_by_Google">由谷歌翻译驱动</string>
     <string name="translate_from_speech">语音翻译</string>
     <string name="service_unavailable">服务不可用</string>
     <string name="to">翻译为</string>

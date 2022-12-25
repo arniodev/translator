@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val fromLang = prefs.getString("fromLang","zh-CN")!!
         val toLang = prefs.getString("toLang","en")!!
         val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
-        poweredByView.text = getString(LangUtils.getEngine(engine))
+        poweredByView.text = getString(LangUtils.getEnginePoweredBy(engine))
 
         val viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
         viewPager.adapter = HomepageAdapter(listOf(
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.earth,
                 "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
                 "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
-            )
+            ) // only for test
         ))
 
     }
