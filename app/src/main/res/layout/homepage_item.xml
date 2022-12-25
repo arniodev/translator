@@ -14,13 +14,13 @@
             android:layout_height="20dp"
             android:id="@+id/item_icon"
             android:src="@drawable/earth"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="45dp"
+            android:layout_marginStart="40dp"
             android:orientation="horizontal">
 
             <LinearLayout

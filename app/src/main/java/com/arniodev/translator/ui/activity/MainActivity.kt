@@ -6,7 +6,11 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.arniodev.translator.R
+import com.arniodev.translator.adapter.HomepageAdapter
+import com.arniodev.translator.data.HomepageItem
+import com.arniodev.translator.utils.LangUtils
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,13 +35,25 @@ class MainActivity : AppCompatActivity() {
         configChecker()
 
         val prefs = getSharedPreferences("config", MODE_PRIVATE)
-        val engine = prefs?.getString("engine","DeepL")
+        val engine = prefs?.getString("engine","DeepL")!!
+        val fromLang = prefs.getString("fromLang","zh-CN")!!
+        val toLang = prefs.getString("toLang","en")!!
         val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
-        poweredByView.text = getString(when(engine) {
-            "Google" -> R.string.powered_by_Google
-            "DeepL" -> R.string.powered_by_DeepL
-            else -> R.string.powered_by_DeepL
-        })
+        poweredByView.text = getString(LangUtils.getEngine(engine))
+
+        val viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
+        viewPager.adapter = HomepageAdapter(listOf(
+            HomepageItem(
+                R.drawable.earth,
+                "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
+                "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
+            ),
+            HomepageItem(
+                R.drawable.earth,
+                "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
+                "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
+            )
+        ))
 
     }
 }
