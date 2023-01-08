@@ -4,6 +4,7 @@
     package="com.arniodev.translator">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.type.watch" />
 
     <application
@@ -17,13 +18,18 @@
         android:theme="@style/Theme.ArTranslator"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activity.InitFinishedActivity"
+            android:name=".ui.activity.GoToDonateActivity"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
+            android:name=".ui.activity.InitFinishedActivity"
+            android:exported="false"></activity>
+        <activity
             android:name=".ui.activity.EngineChoosingActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".ui.activity.PrivacyActivity"
             android:exported="false" />

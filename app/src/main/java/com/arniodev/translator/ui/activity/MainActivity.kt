@@ -14,7 +14,7 @@ import com.arniodev.translator.utils.LangUtils
 
 class MainActivity : AppCompatActivity() {
 
-    private fun configChecker(): Unit {
+    private fun configChecker() {
         val prefs = getSharedPreferences("config", MODE_PRIVATE)
         val configured = prefs.getBoolean("configured",false)
 
@@ -47,12 +47,20 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.earth,
                 "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
                 "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
-            ),
+            ){},
             HomepageItem(
-                R.drawable.earth,
-                "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
-                "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
-            ) // only for test
+                R.drawable.translation_engine_choosing_icon,
+                getString(R.string.translation_engine),
+                getString(R.string.switch_engine)
+            ){},
+            HomepageItem(
+                R.drawable.coffee_cup,
+                getString(R.string.buy_me_a_coffee),
+                getString(R.string.buy_me_a_coffee_descr)
+            ){
+                val intent = Intent(this,GoToDonateActivity::class.java)
+                startActivity(intent)
+            },
         ))
 
     }

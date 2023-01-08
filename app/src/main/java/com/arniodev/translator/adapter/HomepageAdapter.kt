@@ -15,6 +15,7 @@ class HomepageAdapter(private val homepageItemList: List<HomepageItem>): Recycle
         val iconView: ImageView = view.findViewById(R.id.item_icon)
         val firstLineView: TextView = view.findViewById(R.id.item_name)
         val secondLineView: TextView = view.findViewById(R.id.item_descr)
+        val sView = view
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
@@ -30,5 +31,8 @@ class HomepageAdapter(private val homepageItemList: List<HomepageItem>): Recycle
         holder.iconView.setImageResource(item.icon)
         holder.firstLineView.text = item.firstLine
         holder.secondLineView.text = item.secondLine
+        holder.sView.setOnClickListener {
+            item.clickOnListener()
+        }
     }
 }
