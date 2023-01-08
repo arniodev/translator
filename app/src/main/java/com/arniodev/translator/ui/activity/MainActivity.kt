@@ -38,8 +38,14 @@ class MainActivity : AppCompatActivity() {
         val engine = prefs?.getString("engine","DeepL")!!
         val fromLang = prefs.getString("fromLang","zh-CN")!!
         val toLang = prefs.getString("toLang","en")!!
+        val textTranslateView = findViewById<View>(R.id.quick_translate)
         val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
         poweredByView.text = getString(LangUtils.getEnginePoweredBy(engine))
+
+        textTranslateView.setOnClickListener {
+            val intent = Intent(this, TextTranslateActivity::class.java)
+            startActivity(intent)
+        }
 
         val viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
         viewPager.adapter = HomepageAdapter(listOf(

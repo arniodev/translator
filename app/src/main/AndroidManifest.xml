@@ -18,6 +18,13 @@
         android:theme="@style/Theme.ArTranslator"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.TextTranslateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.activity.GoToDonateActivity"
             android:exported="false">
             <meta-data
@@ -26,10 +33,10 @@
         </activity>
         <activity
             android:name=".ui.activity.InitFinishedActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ui.activity.EngineChoosingActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ui.activity.PrivacyActivity"
             android:exported="false" />

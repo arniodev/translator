@@ -33,4 +33,6 @@
     <string name="buy_me_a_coffee_descr">感谢您的支持！</string>
     <string name="hello_bro">你好呀(≧∀≦)ゞ</string>
     <string name="donate_descr">开发者们这么地努力开发，买杯咖啡给他们好不好！非常感谢您对Arnio Dev Team的支持！</string>
+    <string name="text_translate">文本翻译</string>
+    <string name="input_text">请键入需要翻译的文本......</string>
 </resources>

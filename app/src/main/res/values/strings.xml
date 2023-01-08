@@ -33,5 +33,7 @@
     <string name="buy_me_a_coffee_descr">Thanks for supporting!</string>
     <string name="hello_bro">Hello (≧∀≦)ゞ</string>
     <string name="donate_descr">We work on this software so hard. We\'ll be happy if you buy us a coffee! Thanks for supporting!</string>
+    <string name="text_translate">Text Translate</string>
+    <string name="input_text">Type texts to translate here...</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
