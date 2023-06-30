@@ -64,7 +64,7 @@ class GoogleTranslateService {
         var f = 0
         var g = 0
         while (g < query.length) {
-            val m = query[g].toInt()
+            val m = query[g].code
             when {
                 m < 128 -> e[f++] = m
                 m < 2048 -> {
