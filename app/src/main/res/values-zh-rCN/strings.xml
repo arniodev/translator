@@ -35,4 +35,7 @@
     <string name="donate_descr">开发者们这么地努力开发，买杯咖啡给他们好不好！非常感谢您对Arnio Dev Team的支持！</string>
     <string name="text_translate">文本翻译</string>
     <string name="input_text">请键入需要翻译的文本......</string>
+    <string name="translate_result">翻译结果...</string>
+    <string name="cannot_be_empty">输入内容不得为空</string>
+    <string name="network_error">网络错误！</string>
 </resources>

@@ -16,4 +16,22 @@ object LangUtils {
         else -> R.string.powered_by_DeepL
     }
 
+    fun getLangId(engine: String, lang: String) = when(engine) {
+        "Google" -> lang
+        "DeepL" -> {
+            when(lang) {
+                "zh-CN" -> "ZH"
+                "en" -> "EN"
+                else -> "EN"
+            }
+        }
+        else -> { // Same as DeepL
+            when(lang) {
+                "zh-CN" -> "ZH"
+                "en" -> "EN"
+                else -> "EN"
+            }
+        }
+    }
+
 }

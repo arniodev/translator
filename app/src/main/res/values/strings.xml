@@ -35,5 +35,8 @@
     <string name="donate_descr">We work on this software so hard. We\'ll be happy if you buy us a coffee! Thanks for supporting!</string>
     <string name="text_translate">Text Translate</string>
     <string name="input_text">Type texts to translate here...</string>
+    <string name="translate_result">Translate Result...</string>
+    <string name="cannot_be_empty">You haven\'t type anything yet!</string>
+    <string name="network_error">Network Error</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -54,12 +54,12 @@ class EngineChoosingActivity : AppCompatActivity() {
             EngineItem(
                 R.drawable.google_translate_icon,
                 getString(R.string.google_translate),
-                "Google"
-            ), EngineItem(
-                R.drawable.deepl_icon,
-                getString(R.string.deepl_translate),
-                "DeepL"
-            )
+                "Google")
+//            ), EngineItem(
+//                R.drawable.deepl_icon,
+//                getString(R.string.deepl_translate),
+//                "DeepL"
+//            )
         )
         setContent {
             var currentEngine by remember {
