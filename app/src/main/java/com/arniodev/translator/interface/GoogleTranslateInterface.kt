@@ -5,6 +5,12 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface GoogleTranslateInterface {
+    @Headers("User-Agent: ArTranslator/11.45.14",
+        "Host: translate.google.com",
+        "Accept: */*",
+        "Connection: keep-alive",
+        //"Accept-Encoding: gzip,br",
+        "Content-Type: application/json")
     @GET("/translate_a/single")
     fun translate(
         @Query("client") client: String,

@@ -77,20 +77,22 @@ class TextTranslateActivity : AppCompatActivity() {
             }
             thread {
                 try {
-                    googleTranslate.translate(text2translate,toLang,fromLang)?.let { it1 -> Log.d("ArT", it1) }
+                    googleTranslate.translate(text2translate,toLang,fromLang)?.let { it1 -> Log.d("ArT_Google", it1) }
                 } catch (e: Throwable) {
-                    val tapButtonMsg = Message()
-                    tapButtonMsg.what = NETWORK_ERROR
-                    handler.sendMessageDelayed(tapButtonMsg,1500)
+                    val msg = Message()
+                    msg.what = NETWORK_ERROR
+                    handler.sendMessage(msg)
                     return@thread
                 }
             }
 
             thread {
-                try { // TEST ONLY!
-                    deeplTranslate.translate(text2translate,"ZH","EN")?.let { it1 -> Log.d("ArT", it1) }
+                try {
+                    deeplTranslate.translate(text2translate,"ZH","EN")?.let { it1 -> Log.d("ArT_DeepL", it1) }
                 } catch (e: Throwable) {
-                    Toast.makeText(this,getString(R.string.network_error),Toast.LENGTH_SHORT).show()
+                    val msg = Message()
+                    msg.what = NETWORK_ERROR
+                    handler.sendMessage(msg)
                     return@thread
                 }
             }

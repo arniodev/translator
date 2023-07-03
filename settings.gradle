@@ -1,8 +1,14 @@
 pluginManagement {
     repositories {
+        maven {
+            url "https://maven.aliyun.com/repository/central"
+        }
         gradlePluginPortal()
         google()
         mavenCentral()
+//        maven {
+//            "http://maven.oa.com/nexus/content/repositories/android"
+//        }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+//        maven {
+//            "http://maven.oa.com/nexus/content/repositories/android"
+//        }
     }
 }
 rootProject.name = "ArTranslator"

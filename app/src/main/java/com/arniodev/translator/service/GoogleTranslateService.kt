@@ -37,6 +37,7 @@ class GoogleTranslateService {
         return null
     }
 
+    // 计算Google Translate API中的tk（即token，亦称TKK）
     // Converted from JavaScript
     private fun getToken(text: String): String {
         var b = 406644.toLong()
@@ -71,8 +72,8 @@ class GoogleTranslateService {
                     e[f++] = m shr 6 or 0xC0
                     e[f++] = m and 0x3F or 0x80
                 }
-                0xD800 == (m and 0xFC00) && g + 1 < query.length && 0xDC00 == (query[g + 1].toInt() and 0xFC00) -> {
-                    var m2 = (1 shl 16) + ((m and 0x03FF) shl 10) + (query[++g].toInt() and 0x03FF)
+                0xD800 == (m and 0xFC00) && g + 1 < query.length && 0xDC00 == (query[g + 1].code and 0xFC00) -> {
+                    var m2 = (1 shl 16) + ((m and 0x03FF) shl 10) + (query[++g].code and 0x03FF)
                     e[f++] = m2 shr 18 or 0xF0
                     e[f++] = m2 shr 12 and 0x3F or 0x80
                     e[f++] = m2 and 0x3F or 0x80
