@@ -1,6 +1,7 @@
 package com.arniodev.translator.ui.activity
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,8 +12,17 @@ import com.arniodev.translator.R
 import com.arniodev.translator.adapter.HomepageAdapter
 import com.arniodev.translator.data.HomepageItem
 import com.arniodev.translator.utils.LangUtils
+import kotlinx.coroutines.*
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var prefs: SharedPreferences
+    private lateinit var viewPager: ViewPager2
+    private lateinit var fromLang: String
+    private lateinit var toLang: String
+
+    private lateinit var homepageList: MutableList<HomepageItem>
 
     private fun configChecker() {
         val prefs = getSharedPreferences("config", MODE_PRIVATE)
@@ -28,16 +38,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         configChecker()
 
-        val prefs = getSharedPreferences("config", MODE_PRIVATE)
-        val engine = prefs?.getString("engine","DeepL")!!
-        val fromLang = prefs.getString("fromLang","zh-CN")!!
-        val toLang = prefs.getString("toLang","en")!!
+        prefs = getSharedPreferences("config", MODE_PRIVATE)
+        val engine = prefs.getString("engine","DeepL")!!
+        fromLang = prefs.getString("fromLang","zh-CN")!!
+        toLang = prefs.getString("toLang","en")!!
+
+        Log.d("ArT","Lang $fromLang $toLang")
+
         val textTranslateView = findViewById<View>(R.id.quick_translate)
         val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
         poweredByView.text = getString(LangUtils.getEnginePoweredBy(engine))
@@ -47,13 +61,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
-        viewPager.adapter = HomepageAdapter(listOf(
+        homepageList = mutableListOf(
             HomepageItem(
                 R.drawable.earth,
                 "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
                 "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
-            ){},
+            ){
+                val intent = Intent(this,LangChoosingActivity::class.java)
+                intent.putExtra("title", getString(R.string.source_lang))
+                intent.putExtra("prefs","fromLang")
+                startActivity(intent)
+            },
             HomepageItem(
                 R.drawable.translation_engine_choosing_icon,
                 getString(R.string.translation_engine),
@@ -66,8 +84,35 @@ class MainActivity : AppCompatActivity() {
             ){
                 val intent = Intent(this,GoToDonateActivity::class.java)
                 startActivity(intent)
-            },
-        ))
+            }
+        )
+
+        viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
+        viewPager.adapter = HomepageAdapter(homepageList)
 
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        val adapter = viewPager.adapter as HomepageAdapter
+
+        val newPrefs = getSharedPreferences("config", MODE_PRIVATE)
+        val newFromLang = newPrefs.getString("fromLang","zh-CN")!!
+        val newToLang = newPrefs.getString("toLang","en")!!
+
+        setNewLang(newFromLang,newToLang)
+
+        Log.d("ArT","$newFromLang $newToLang $homepageList")
+
+        viewPager.adapter = HomepageAdapter(homepageList)
+
+        adapter.notifyItemChanged(0)
+    }
+
+    private fun setNewLang(fromLang: String, toLang: String) {
+        homepageList[0].firstLine = "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}"
+        homepageList[0].secondLine = "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
+    }
+
 }

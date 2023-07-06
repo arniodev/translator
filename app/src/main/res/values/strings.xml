@@ -38,5 +38,10 @@
     <string name="translate_result">Translate Result...</string>
     <string name="cannot_be_empty">You haven\'t type anything yet!</string>
     <string name="network_error">Network Error</string>
+    <string name="lang_choosing">Language Choosing</string>
+    <string name="source_lang">Source Language</string>
+    <string name="target_lang">Target Language</string>
+    <string name="ja">Japanese</string>
+    <string name="cannot_be_same">The source language and target language cannot be same!</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

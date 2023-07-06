@@ -101,6 +101,6 @@ class DeepLTranslateService {
 
     }
 
-    private fun generateId() = Random.nextInt(10000000,100000000)
+    private fun generateId() = Random.nextInt(16168527,91918759) // Just4Fun Lmaooooooooo
 
 }

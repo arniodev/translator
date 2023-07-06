@@ -88,7 +88,7 @@ class TextTranslateActivity : AppCompatActivity() {
 
             thread {
                 try {
-                    deeplTranslate.translate(text2translate,"ZH","EN")?.let { it1 -> Log.d("ArT_DeepL", it1) }
+                    deeplTranslate.translate(text2translate,LangUtils.getLangId("DeepL",fromLang),LangUtils.getLangId("DeepL",toLang))?.let { it1 -> Log.d("ArT_DeepL", it1) }
                 } catch (e: Throwable) {
                     val msg = Message()
                     msg.what = NETWORK_ERROR
