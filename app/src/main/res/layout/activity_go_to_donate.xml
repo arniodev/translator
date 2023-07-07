@@ -42,85 +42,90 @@
 
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="145dp"
-            android:background="@drawable/donation_background"
-            android:layout_marginTop="3dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical"
-            android:visibility="visible">
-
+            android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="101dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/hello_bro"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginEnd="15dp"
-                    android:alpha="0.82"
-                    android:text="@string/donate_descr"
-                    android:textColor="@color/white"
-                    android:textSize="8sp" />
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/jump_layout"
-                android:gravity="center_vertical">
+                android:layout_height="145dp"
+                android:background="@drawable/donation_background"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_centerInParent="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:layout_width="13dp"
-                            android:layout_height="13dp"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="5dp"
-                            android:src="@drawable/coffee_cup" />
-
-                    </RelativeLayout>
+                    android:layout_height="101dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/buy_me_a_coffee"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/hello_bro"
                         android:textColor="@color/white"
-                        android:textSize="10sp" />
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="15dp"
+                        android:alpha="0.82"
+                        android:text="@string/donate_descr"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
 
                 </LinearLayout>
 
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/jump_layout"
+                    android:gravity="center_vertical">
 
-        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/coffee_cup" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/buy_me_a_coffee"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
