@@ -43,4 +43,5 @@
     <string name="target_lang">目标语言</string>
     <string name="ja">日语</string>
     <string name="cannot_be_same">源语言与目标语言不得相同</string>
+    <string name="translate_result_from">来自</string>
 </resources>

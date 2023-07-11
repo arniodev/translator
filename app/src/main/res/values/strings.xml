@@ -43,5 +43,6 @@
     <string name="target_lang">Target Language</string>
     <string name="ja">Japanese</string>
     <string name="cannot_be_same">The source language and target language cannot be same!</string>
+    <string name="translate_result_from">"Result is from: "</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

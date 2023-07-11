@@ -75,46 +75,42 @@ class TextTranslateActivity : AppCompatActivity() {
                 Toast.makeText(this,getString(R.string.cannot_be_empty),Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            thread {
-                try {
-                    googleTranslate.translate(text2translate,toLang,fromLang)?.let { it1 -> Log.d("ArT_Google", it1) }
-                } catch (e: Throwable) {
-                    val msg = Message()
-                    msg.what = NETWORK_ERROR
-                    handler.sendMessage(msg)
-                    return@thread
+
+            when(engine) {
+                "Google" -> {
+                    thread {
+                        try {
+                            googleTranslate.translate(text2translate,toLang,fromLang)?.let {
+                                it1 -> Log.d("ArT_Google", it1)
+                            }
+                        } catch (e: Throwable) {
+                            val msg = Message()
+                            msg.what = NETWORK_ERROR
+                            handler.sendMessage(msg)
+                            return@thread
+                        }
+                    }
+                }
+                "DeepL" -> {
+                    thread {
+                        try {
+                            deeplTranslate.translate(text2translate,LangUtils.getLangId("DeepL",fromLang),LangUtils.getLangId("DeepL",toLang))?.let {
+                                it1 -> Log.d("ArT_DeepL", it1)
+                            }
+                        } catch (e: Throwable) {
+                            val msg = Message()
+                            msg.what = NETWORK_ERROR
+                            handler.sendMessage(msg)
+                            return@thread
+                        }
+                    }
+                }
+                else -> {
+
                 }
             }
-
-            thread {
-                try {
-                    deeplTranslate.translate(text2translate,LangUtils.getLangId("DeepL",fromLang),LangUtils.getLangId("DeepL",toLang))?.let { it1 -> Log.d("ArT_DeepL", it1) }
-                } catch (e: Throwable) {
-                    val msg = Message()
-                    msg.what = NETWORK_ERROR
-                    handler.sendMessage(msg)
-                    return@thread
-                }
-            }
-
-
-//            val translateResult = when(engine) {
-//                    "Google" -> translateByGoogle(text2translate.toString())
-//                    else -> {
-//                        //translateByDeepL(text2translate)
-//                    }
-//            }
         }
     }
 
-//    private fun translateByDeepL(text: String): String {
-//
-//    }
 
-    private fun translateByGoogle(text: String): String {
-        runBlocking {
-
-        }
-    return "null"
-    }
 }

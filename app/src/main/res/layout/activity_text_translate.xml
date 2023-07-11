@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,7 +27,8 @@
                 android:text="@string/text_translate"
                 android:layout_marginStart="12dp"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp"
+                android:textStyle="bold"/>
 
             <TextClock
                 android:layout_width="wrap_content"
@@ -45,13 +46,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="7dp"
             android:orientation="vertical"
             android:layout_gravity="top">
             <EditText
                 android:layout_width="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
                 android:layout_height="match_parent"
                 style="@style/Widget.AppCompat.EditText"
                 android:layout_marginTop="7dp"
@@ -64,9 +65,21 @@
                 android:id="@+id/text_editor"
                 android:textColorHint="#82FFFFFF" />
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_drawer"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:visibility="visible"
+            android:id="@+id/drawer_collapsed"
             android:background="#292929">
             <TextView
                 android:layout_width="wrap_content"
@@ -75,8 +88,94 @@
                 android:textColor="#707070"
                 android:textSize="12sp"
                 android:gravity="center_vertical"
-                android:layout_marginStart="7dp"/>
+                android:layout_marginStart="7dp" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            android:background="#292929"
+            android:id="@+id/drawer_main">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:id="@+id/fold_btn">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/down"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:maxLines="4"
+                        android:ellipsize="end"
+                        android:layout_marginBottom="7dp"
+                        android:text="This is an apple. I like apples. Apples are good for our health. Would you like to eat some apples? It is tasty hahahahahaha"
+                        android:autoSizeMaxTextSize="15sp"
+                        android:textColor="@color/white"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/translation"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="3dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="12dp"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/translate_result_from"
+                            android:textColor="#707070"
+                            android:textSize="10sp"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="12dp"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:id="@+id/result_from_view"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <FrameLayout
@@ -90,14 +189,16 @@
             android:gravity="top"
             android:layout_margin="20dp"
             android:id="@+id/fab_done"
+            android:visibility="visible"
             app:backgroundTint="@color/ArT_blue"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:src="@drawable/go"
             app:fabCustomSize="30dp"
             app:maxImageSize="15dp"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside"
+            />
 
     </FrameLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
