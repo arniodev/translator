@@ -1,5 +1,6 @@
 package com.arniodev.translator.service
 
+import android.util.Log
 import com.arniodev.translator.`interface`.GoogleTranslateInterface
 import com.google.gson.JsonArray
 import retrofit2.Retrofit
@@ -19,7 +20,7 @@ class GoogleTranslateService {
 
     private val service = retrofit.create<GoogleTranslateInterface>()
 
-    fun translate(query: String, targetLanguage: String, sourceLanguage: String): String? {
+    fun translate(query: String, targetLanguage: String, sourceLanguage: String): String {
         val request = service.translate(client, sourceLanguage, targetLanguage, dt, query, getToken(query))
         val response = request.execute()
         if (response.isSuccessful) {
@@ -29,12 +30,13 @@ class GoogleTranslateService {
                 if (firstElement is JsonArray) {
                     val translationArray = firstElement[0]
                     if (translationArray is JsonArray) {
+                        Log.d("ArT_R",translationArray[0].asString)
                         return translationArray[0].asString
                     }
                 }
             }
         }
-        return null
+        return ""
     }
 
     // 计算Google Translate API中的tk（即token，亦称TKK）

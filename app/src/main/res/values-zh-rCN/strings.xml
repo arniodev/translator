@@ -44,4 +44,5 @@
     <string name="ja">日语</string>
     <string name="cannot_be_same">源语言与目标语言不得相同</string>
     <string name="translate_result_from">来自</string>
+    <string name="engine_invalid">翻译引擎配置错误</string>
 </resources>

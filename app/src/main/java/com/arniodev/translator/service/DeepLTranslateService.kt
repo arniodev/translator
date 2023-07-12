@@ -43,7 +43,7 @@ class DeepLTranslateService {
         .build()
     private val service = retrofit.create<DeepLTranslateInterface>()
 
-    fun translate(text: String, sourceLang: String, targetLang: String): String? {
+    fun translate(text: String, sourceLang: String, targetLang: String): String {
         val id = generateId()
         val requestDataObj = LMTRequest(
             "2.0",
@@ -97,7 +97,7 @@ class DeepLTranslateService {
             return responseJson.result.translations[0].beams[0].sentences[0].text
         }
 
-        return null
+        return ""
 
     }
 
