@@ -149,7 +149,7 @@ class TextTranslateActivity : AppCompatActivity() {
                     thread {
                         try {
                             //Log.d("ArT","${LangUtils.getLangId("DeepL",fromLang)},${LangUtils.getLangId("DeepL",toLang)},$fromLang,$toLang")
-                            translateResult = deeplTranslate.translate(text2translate,fromLang,toLang))
+                            translateResult = deeplTranslate.translate(text2translate,fromLang,toLang)
                             val msg = Message()
                             msg.what = SHOW_DRAWER
                             handler.sendMessage(msg)
