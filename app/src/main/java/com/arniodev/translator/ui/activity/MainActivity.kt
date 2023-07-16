@@ -76,7 +76,10 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.translation_engine_choosing_icon,
                 getString(R.string.translation_engine),
                 getString(R.string.switch_engine)
-            ){},
+            ){
+                val intent = Intent(this,EngineChoosingActivity::class.java)
+                startActivity(intent)
+            },
             HomepageItem(
                 R.drawable.coffee_cup,
                 getString(R.string.buy_me_a_coffee),
@@ -100,6 +103,10 @@ class MainActivity : AppCompatActivity() {
         val newPrefs = getSharedPreferences("config", MODE_PRIVATE)
         val newFromLang = newPrefs.getString("fromLang","zh-CN")!!
         val newToLang = newPrefs.getString("toLang","en")!!
+        val newEngine = newPrefs.getString("engine","DeepL")!!
+
+        val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
+        poweredByView.text = getString(LangUtils.getEnginePoweredBy(newEngine))
 
         setNewLang(newFromLang,newToLang)
 

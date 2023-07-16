@@ -41,6 +41,12 @@ class TextTranslateActivity : AppCompatActivity() {
                 }
                 SHOW_DRAWER -> {
                     Log.d("ArT",translateResult)
+
+                    if (translateResult == "") {
+                        Toast.makeText(_CONTEXT,getString(R.string.result_empty),Toast.LENGTH_SHORT).show()
+                        return
+                    }
+
                     findViewById<FloatingActionButton>(R.id.fab_done).apply {
                         visibility = View.GONE
                         setImageResource(R.drawable.go)

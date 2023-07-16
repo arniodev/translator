@@ -45,5 +45,6 @@
     <string name="cannot_be_same">The source language and target language cannot be same!</string>
     <string name="translate_result_from">"Result is from: "</string>
     <string name="engine_invalid">Invalid Engine Configuration</string>
+    <string name="result_empty">The result is empty!</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

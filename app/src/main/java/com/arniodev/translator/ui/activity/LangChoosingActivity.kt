@@ -69,5 +69,9 @@ class LangChoosingActivity : AppCompatActivity() {
             addItemDecoration(RecyclerDecoration())
         }
 
+        findViewById<View>(R.id.back_btn).setOnClickListener {
+            finish()
+        }
+
     }
 }

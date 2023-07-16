@@ -129,11 +129,15 @@ class EngineChoosingActivity : AppCompatActivity() {
                                     prefs.edit {
                                         putString("engine", currentEngine)
                                     }
-                                    val intent = Intent(
-                                        this@EngineChoosingActivity,
-                                        InitFinishedActivity::class.java
-                                    )
-                                    startActivity(intent)
+
+                                    if(intent.getBooleanExtra("init",false)) {
+                                        val intent = Intent(
+                                            this@EngineChoosingActivity,
+                                            InitFinishedActivity::class.java
+                                        )
+                                        startActivity(intent)
+
+                                    }
                                     finish()
                                 }
                             }
