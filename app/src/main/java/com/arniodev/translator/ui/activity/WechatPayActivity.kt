@@ -6,20 +6,20 @@ import android.os.Bundle
 import android.view.View
 import com.arniodev.translator.R
 
-class GoToDonateActivity : AppCompatActivity() {
+class WechatPayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_go_to_donate)
+        setContentView(R.layout.activity_wechat_pay)
 
         val backBtnView = findViewById<View>(R.id.back_btn)
-        val jumpView = findViewById<View>(R.id.jump_layout)
+        val switchView = findViewById<View>(R.id.switch_one)
         backBtnView.setOnClickListener {
             finish()
         }
 
-        jumpView.setOnClickListener {
-            val intent = Intent(this,WechatPayActivity::class.java)
-            startActivity(intent)
+        switchView.setOnClickListener {
+            startActivity(Intent(this,AlipayActivity::class.java))
+            finish()
         }
 
     }

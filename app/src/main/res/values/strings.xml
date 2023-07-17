@@ -46,5 +46,9 @@
     <string name="translate_result_from">"Result is from: "</string>
     <string name="engine_invalid">Invalid Engine Configuration</string>
     <string name="result_empty">The result is empty!</string>
+    <string name="wechat_pay">Wechat Pay</string>
+    <string name="scan_with_wechat">Scan with WeChat</string>
+    <string name="alipay">Alipay</string>
+    <string name="scan_with_alipay">Scan with Alipay</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

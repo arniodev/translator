@@ -46,4 +46,8 @@
     <string name="translate_result_from">来自</string>
     <string name="engine_invalid">翻译引擎配置错误</string>
     <string name="result_empty">结果为空！</string>
+    <string name="wechat_pay">微信支付</string>
+    <string name="scan_with_wechat">使用微信扫码</string>
+    <string name="alipay">支付宝</string>
+    <string name="scan_with_alipay">使用支付宝扫码</string>
 </resources>
