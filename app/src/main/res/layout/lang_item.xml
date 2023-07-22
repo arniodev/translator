@@ -28,8 +28,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/lang_name"
                 android:textColor="@color/white"
-                android:textSize="13sp"
-                android:text="@string/en"
+                android:textSize="11sp"
+                android:text="@string/zh_CN"
                 android:gravity="center_vertical"
                 android:layout_marginStart="15dp" />
 

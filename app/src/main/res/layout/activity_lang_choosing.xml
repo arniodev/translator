@@ -35,7 +35,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/lang_choosing"
                 android:textStyle="bold"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="25dp"
                 android:textColor="@color/white"
                 android:id="@+id/lang_choosing_title"
                 android:textSize="14sp"/>

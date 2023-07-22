@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fromLang: String
     private lateinit var toLang: String
 
+    var changeLang = false
+
     private lateinit var homepageList: MutableList<HomepageItem>
 
     private fun configChecker() {
@@ -44,7 +46,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         configChecker()
-
         prefs = getSharedPreferences("config", MODE_PRIVATE)
         val engine = prefs.getString("engine","DeepL")!!
         fromLang = prefs.getString("fromLang","zh-CN")!!
@@ -67,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                 "${getString(R.string.to)} ${getString(LangUtils.getLang(toLang))}",
                 "${getString(R.string.from)} ${getString(LangUtils.getLang(fromLang))}"
             ){
+                changeLang = true
                 val intent = Intent(this,LangChoosingActivity::class.java)
                 intent.putExtra("title", getString(R.string.source_lang))
                 intent.putExtra("prefs","fromLang")
@@ -107,23 +109,27 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        val adapter = viewPager.adapter as HomepageAdapter
+        if(changeLang) {
+            val adapter = viewPager.adapter as HomepageAdapter
 
-        val newPrefs = getSharedPreferences("config", MODE_PRIVATE)
-        val newFromLang = newPrefs.getString("fromLang","zh-CN")!!
-        val newToLang = newPrefs.getString("toLang","en")!!
-        val newEngine = newPrefs.getString("engine","DeepL")!!
+            val newPrefs = getSharedPreferences("config", MODE_PRIVATE)
+            val newFromLang = newPrefs.getString("fromLang","zh-CN")!!
+            val newToLang = newPrefs.getString("toLang","en")!!
+            val newEngine = newPrefs.getString("engine","DeepL")!!
 
-        val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
-        poweredByView.text = getString(LangUtils.getEnginePoweredBy(newEngine))
+            val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
+            poweredByView.text = getString(LangUtils.getEnginePoweredBy(newEngine))
 
-        setNewLang(newFromLang,newToLang)
+            setNewLang(newFromLang,newToLang)
 
-        Log.d("ArT","$newFromLang $newToLang $homepageList")
+            Log.d("ArT","$newFromLang $newToLang $homepageList")
 
-        viewPager.adapter = HomepageAdapter(homepageList)
+            viewPager.adapter = HomepageAdapter(homepageList)
 
-        adapter.notifyItemChanged(0)
+            adapter.notifyItemChanged(0)
+
+            changeLang = false
+        }
     }
 
     private fun setNewLang(fromLang: String, toLang: String) {
