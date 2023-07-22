@@ -100,15 +100,15 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="10dp">
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/switch_one">
 
                             <ImageView
                                 android:layout_width="10dp"
                                 android:layout_height="10dp"
                                 android:layout_marginTop="3dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/switch_one"
-                                android:id="@+id/switch_one" />
+                                android:src="@drawable/switch_one" />
 
                         </RelativeLayout>
                         
