@@ -35,6 +35,7 @@ class AboutActivity : AppCompatActivity() {
                 logoView.setImageResource(R.drawable.arniodev_dark)
             }
             if(clickCounter > 15) {
+
                 TODO("SET LANGUAGE TO CANTONESE")
             }
         }
