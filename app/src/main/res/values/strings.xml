@@ -30,7 +30,7 @@
     <string name="zh_CN">Simplified Chinese</string>
     <string name="switch_engine">Switch the engine</string>
     <string name="buy_me_a_coffee">Buy Me a Coffee</string>
-    <string name="buy_me_a_coffee_descr">Thanks for supporting!</string>
+    <string name="buy_me_a_coffee_descr">Thanks for supporting</string>
     <string name="hello_bro">Hello (≧∀≦)ゞ</string>
     <string name="donate_descr">We work on this software so hard. We\'ll be happy if you buy us a coffee! Thanks for supporting!</string>
     <string name="text_translate">Text Translate</string>
@@ -50,5 +50,11 @@
     <string name="scan_with_wechat">Scan with WeChat</string>
     <string name="alipay">Alipay</string>
     <string name="scan_with_alipay">Scan with Alipay</string>
+    <string name="copyright">Copyright © 2022 - Now Arnio Dev Team.\nAll Rights Reserved.</string>
+    <string name="check_update">Check Update</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="ArT_about">Developed by Arnio Dev</string>
+    <string name="access_denied">Access Denied</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

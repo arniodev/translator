@@ -87,6 +87,14 @@ class MainActivity : AppCompatActivity() {
             ){
                 val intent = Intent(this,GoToDonateActivity::class.java)
                 startActivity(intent)
+            },
+            HomepageItem(
+                R.drawable.about,
+                getString(R.string.about_us),
+                getString(R.string.ArT_about)
+            ){
+                val intent = Intent(this,AboutActivity::class.java)
+                startActivity(intent)
             }
         )
 

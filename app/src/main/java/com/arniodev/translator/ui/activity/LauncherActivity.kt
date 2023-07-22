@@ -5,10 +5,17 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
+import android.provider.Settings
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.arniodev.translator.R
+import com.arniodev.translator.service.ArTranslatorService
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
+import kotlin.concurrent.thread
+
 
 class LauncherActivity : AppCompatActivity() {
 
@@ -37,11 +44,29 @@ class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
+
+        AppCenter.start(
+            application, "034c8f4d-7355-4a6c-943f-1f9103961d1d",
+            Analytics::class.java, Crashes::class.java
+        ) // 加载Microsoft App Center
+
         val iconMsg = Message()
         iconMsg.what = SHOW_ICON
         handler.sendMessageDelayed(iconMsg,750)
-        val activityMsg = Message()
-        activityMsg.what = START_MAIN_ACTIVITY
-        handler.sendMessageDelayed(activityMsg,2500)
+
+        val id = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+        val service = ArTranslatorService()
+        thread {
+            if(service.checkDevices(id)) {
+                val activityMsg = Message()
+                activityMsg.what = START_MAIN_ACTIVITY
+                handler.sendMessage(activityMsg)
+            } else {
+                val intent = Intent(this,AccessDeniedActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+
     }
 }

@@ -30,7 +30,7 @@
     <string name="zh_CN">简体中文</string>
     <string name="switch_engine">更换翻译引擎</string>
     <string name="buy_me_a_coffee">请作者喝杯咖啡</string>
-    <string name="buy_me_a_coffee_descr">感谢您的支持！</string>
+    <string name="buy_me_a_coffee_descr">感谢您的支持</string>
     <string name="hello_bro">你好呀 (≧∀≦)ゞ</string>
     <string name="donate_descr">开发者们这么地努力开发，买杯咖啡给他们好不好！非常感谢您对Arnio Dev Team的支持！</string>
     <string name="text_translate">文本翻译</string>
@@ -50,4 +50,10 @@
     <string name="scan_with_wechat">使用微信扫码</string>
     <string name="alipay">支付宝</string>
     <string name="scan_with_alipay">使用支付宝扫码</string>
+    <string name="copyright">版权所有 © 2022 - 至今，Arnio Dev Team。\n保留所有权利。</string>
+    <string name="check_update">检查更新</string>
+    <string name="contact_us">联系我们</string>
+    <string name="about_us">关于我们</string>
+    <string name="ArT_about">由Arnio Dev开发</string>
+    <string name="access_denied">没有权限</string>
 </resources>
