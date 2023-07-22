@@ -1,6 +1,7 @@
 package com.arniodev.translator.ui.activity
 
 import android.content.Intent
+import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,6 +15,7 @@ import com.arniodev.translator.service.ArTranslatorService
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
+import java.util.*
 import kotlin.concurrent.thread
 
 
@@ -44,6 +46,13 @@ class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
+
+        val locale = Locale(Resources.getSystem().configuration.locales.get(0).language)
+        //Locale.setDefault(locale)
+        val resources = this.resources
+        val configuration = resources.configuration
+        configuration.setLocale(locale)
+        this.createConfigurationContext(configuration)
 
         AppCenter.start(
             application, "034c8f4d-7355-4a6c-943f-1f9103961d1d",

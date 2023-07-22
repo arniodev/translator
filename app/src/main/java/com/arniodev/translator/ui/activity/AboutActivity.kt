@@ -1,5 +1,6 @@
 package com.arniodev.translator.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.arniodev.translator.BuildConfig
 import com.arniodev.translator.R
+import java.util.*
 
 class AboutActivity : AppCompatActivity() {
 
@@ -35,8 +37,15 @@ class AboutActivity : AppCompatActivity() {
                 logoView.setImageResource(R.drawable.arniodev_dark)
             }
             if(clickCounter > 15) {
-
-                TODO("SET LANGUAGE TO CANTONESE")
+                val locale = Locale("zh", "GD")
+                //Locale.setDefault(locale)
+                val resources = this.resources
+                val configuration = resources.configuration
+                configuration.setLocale(locale)
+                this.createConfigurationContext(configuration)
+                //MainActivity().recreate()
+                finish()
+                //TODO("SET LANGUAGE TO CANTONESE")
             }
         }
 
@@ -49,4 +58,10 @@ class AboutActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        startActivity(Intent(this,MainActivity::class.java))
+    }
+
 }
