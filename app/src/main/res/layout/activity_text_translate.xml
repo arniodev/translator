@@ -60,6 +60,7 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:gravity="top"
+                android:inputType="text"
                 android:background="@color/alpha_0"
                 android:imeOptions="actionDone"
                 android:id="@+id/text_editor"
