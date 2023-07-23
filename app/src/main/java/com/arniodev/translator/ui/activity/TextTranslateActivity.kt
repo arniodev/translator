@@ -117,7 +117,8 @@ class TextTranslateActivity : AppCompatActivity() {
         })
 
         editTextView.setOnEditorActionListener { _, i, _ ->
-            if(i == EditorInfo.IME_ACTION_DONE) {
+            if(i == EditorInfo.IME_ACTION_DONE || i == EditorInfo.IME_ACTION_NONE || i == EditorInfo.IME_ACTION_GO ||
+                    i == EditorInfo.IME_ACTION_NEXT || i == EditorInfo.IME_ACTION_SEND || i == EditorInfo.IME_ACTION_SEARCH || i == EditorInfo.IME_ACTION_UNSPECIFIED) {
                 fabView.performClick()
                 true
             }
