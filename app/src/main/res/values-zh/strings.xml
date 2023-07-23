@@ -56,4 +56,6 @@
     <string name="about_us">关于我们</string>
     <string name="ArT_about">由Arnio Dev开发</string>
     <string name="access_denied">没有权限</string>
+    <string name="try2swipe">试试滑动这里！</string>
+    <string name="got_it">了解！</string>
 </resources>

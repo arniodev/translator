@@ -3,6 +3,9 @@ pluginManagement {
         maven {
             url "https://maven.aliyun.com/repository/central"
         }
+        maven {
+            url "https://jitpack.io"
+        }
         gradlePluginPortal()
         google()
         mavenCentral()
@@ -16,6 +19,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://maven.aliyun.com/repository/central"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
 //        maven {
 //            "http://maven.oa.com/nexus/content/repositories/android"
 //        }

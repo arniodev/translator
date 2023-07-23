@@ -11,8 +11,8 @@ android {
         applicationId "com.arniodev.translator"
         minSdk 26
         targetSdk 33
-        versionCode 2
-        versionName "v1.0.0-beta.1"
+        versionCode 3
+        versionName "v1.0.0-beta.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -75,4 +75,5 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.6.1"
     implementation "com.squareup.okhttp3:logging-interceptor:4.11.0"
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.7'
 }

@@ -8,6 +8,7 @@ import android.os.Looper
 import android.os.Message
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -75,6 +76,7 @@ class TextTranslateActivity : AppCompatActivity() {
         val fromLang = LangUtils.getLangId(engine,prefs.getString("fromLang","zh-CN")!!)
         val toLang = LangUtils.getLangId(engine,prefs.getString("toLang","en")!!)
         val fabView = findViewById<FloatingActionButton>(R.id.fab_done)
+        val editTextView = findViewById<View>(R.id.text_editor) as EditText
         drawer = BottomSheetBehavior.from(findViewById<LinearLayout>(R.id.result_drawer))
 
         drawer.peekHeight = 30.dp2px(this)
@@ -114,13 +116,24 @@ class TextTranslateActivity : AppCompatActivity() {
             }
         })
 
+        editTextView.setOnEditorActionListener { _, i, _ ->
+            if(i == EditorInfo.IME_ACTION_DONE) {
+                fabView.performClick()
+                true
+            }
+            false
+        }
+
+        editTextView.setOnClickListener {
+            drawer.state = BottomSheetBehavior.STATE_COLLAPSED
+        }
+
         findViewById<LinearLayout>(R.id.fold_btn).setOnClickListener {
             drawer.state = BottomSheetBehavior.STATE_COLLAPSED
         }
 
         fabView.setOnClickListener {
             //fabView.setImageResource(androidx.swiperefreshlayout.widget.SwipeRefreshLayout.DEFAULT)
-            val editTextView = findViewById<View>(R.id.text_editor) as EditText
             val text2translate = editTextView.text.toString()
             Log.d("ArT",text2translate)
             if(text2translate == ""){

@@ -13,6 +13,8 @@ import com.arniodev.translator.adapter.HomepageAdapter
 import com.arniodev.translator.data.HomepageItem
 import com.arniodev.translator.utils.LangUtils
 import kotlinx.coroutines.*
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView
+import uk.co.deanwild.materialshowcaseview.shape.RectangleShape
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -103,6 +105,16 @@ class MainActivity : AppCompatActivity() {
 
         viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
         viewPager.adapter = HomepageAdapter(homepageList)
+
+        MaterialShowcaseView.Builder(this)
+            .setTarget(viewPager)
+            .setDismissText(R.string.got_it)
+            .setContentText(R.string.try2swipe)
+            .setDelay(500)
+            .singleUse("viewPager-T")
+            .setDismissOnTouch(true)
+            .setDismissOnTargetTouch(true)
+            .show()
 
     }
 

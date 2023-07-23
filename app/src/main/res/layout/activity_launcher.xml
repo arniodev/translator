@@ -22,7 +22,7 @@
             android:layout_height="60dp"
             android:id="@+id/LauncherIcon"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@mipmap/ic_launcher_round"
             android:visibility="gone"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

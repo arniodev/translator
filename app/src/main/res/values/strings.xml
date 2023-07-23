@@ -56,5 +56,7 @@
     <string name="about_us">About Us</string>
     <string name="ArT_about">Developed by Arnio Dev</string>
     <string name="access_denied">Access Denied</string>
+    <string name="try2swipe">Try to Swipe Here!</string>
+    <string name="got_it">Got it!</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
