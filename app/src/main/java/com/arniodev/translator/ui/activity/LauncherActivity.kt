@@ -47,12 +47,12 @@ class LauncherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
 
-        val locale = Locale(Resources.getSystem().configuration.locales.get(0).language)
-        //Locale.setDefault(locale)
-        val resources = this.resources
-        val configuration = resources.configuration
-        configuration.setLocale(locale)
-        this.createConfigurationContext(configuration)
+//        val locale = Locale(Resources.getSystem().configuration.locales.get(0).language)
+//        Locale.setDefault(locale)
+//        val resources = this.resources
+//        val configuration = resources.configuration
+//        configuration.setLocale(locale)
+//        this.createConfigurationContext(configuration)
 
         AppCenter.start(
             application, "034c8f4d-7355-4a6c-943f-1f9103961d1d",
