@@ -36,17 +36,17 @@ class AboutActivity : AppCompatActivity() {
             if (clickCounter == 10) {
                 logoView.setImageResource(R.drawable.arniodev_dark)
             }
-            if(clickCounter > 15) {
-                val locale = Locale("zh", "GD")
-                //Locale.setDefault(locale)
-                val resources = this.resources
-                val configuration = resources.configuration
-                configuration.setLocale(locale)
-                this.createConfigurationContext(configuration)
-                //MainActivity().recreate()
-                finish()
-                //TODO("SET LANGUAGE TO CANTONESE")
-            }
+            TODO("SWITCH LANGUAGE TO CANTONESE WHEN clickCounter > 15")
+//            if(clickCounter > 15) {
+//                val locale = Locale("zh", "GD")
+//                //Locale.setDefault(locale)
+//                val resources = this.resources
+//                val configuration = resources.configuration
+//                configuration.setLocale(locale)
+//                this.createConfigurationContext(configuration)
+//                //MainActivity().recreate()
+//                finish()
+//            }
         }
 
         contactUsView.setOnClickListener {
@@ -61,7 +61,7 @@ class AboutActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        startActivity(Intent(this,MainActivity::class.java))
+        // startActivity(Intent(this,MainActivity::class.java))
     }
 
 }
