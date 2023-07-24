@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             .setDismissText(R.string.got_it)
             .setContentText(R.string.try2swipe)
             .setDelay(500)
-            .singleUse("viewPager-T")
+            .singleUse("viewPager-LoR")
             .setDismissOnTouch(true)
             .setDismissOnTargetTouch(true)
             .show()
