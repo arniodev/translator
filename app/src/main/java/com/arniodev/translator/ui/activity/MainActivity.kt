@@ -3,6 +3,7 @@ package com.arniodev.translator.ui.activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -14,8 +15,8 @@ import com.arniodev.translator.data.HomepageItem
 import com.arniodev.translator.utils.LangUtils
 import kotlinx.coroutines.*
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView
-import uk.co.deanwild.materialshowcaseview.shape.RectangleShape
-import kotlin.concurrent.thread
+import android.text.style.AbsoluteSizeSpan
+import android.text.Spanned
 
 class MainActivity : AppCompatActivity() {
 
@@ -106,12 +107,14 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById<View>(R.id.more_view_pager) as ViewPager2
         viewPager.adapter = HomepageAdapter(homepageList)
 
+        val content = SpannableStringBuilder(getString(R.string.try2swipe))
+        content.setSpan(AbsoluteSizeSpan(16, true), 0, content.length, Spanned.SPAN_INCLUSIVE_INCLUSIVE)
+
         MaterialShowcaseView.Builder(this)
             .setTarget(viewPager)
-            .setDismissText(R.string.got_it)
-            .setContentText(R.string.try2swipe)
+            .setContentText(content)
             .setDelay(500)
-            .singleUse("viewPager-LoR")
+            .singleUse("viewPager-LoR-16sp")
             .setDismissOnTouch(true)
             .setDismissOnTargetTouch(true)
             .show()
