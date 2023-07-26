@@ -58,5 +58,7 @@
     <string name="access_denied">Access Denied</string>
     <string name="try2swipe">Try to Swipe Left or Right Here!</string>
     <string name="got_it">Got it!</string>
+    <string name="EULA">EULA</string>
+    <string name="contributor">Contributors</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -36,7 +36,7 @@ class AboutActivity : AppCompatActivity() {
             if (clickCounter == 10) {
                 logoView.setImageResource(R.drawable.arniodev_dark)
             }
-            TODO("SWITCH LANGUAGE TO CANTONESE WHEN clickCounter > 15")
+//            TODO("SWITCH LANGUAGE TO CANTONESE WHEN clickCounter > 15")
 //            if(clickCounter > 15) {
 //                val locale = Locale("zh", "GD")
 //                //Locale.setDefault(locale)

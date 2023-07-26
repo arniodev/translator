@@ -47,6 +47,8 @@ class LauncherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
 
+        val insiderEnv = true // 内测环境配置
+
 //        val locale = Locale(Resources.getSystem().configuration.locales.get(0).language)
 //        Locale.setDefault(locale)
 //        val resources = this.resources
@@ -65,16 +67,23 @@ class LauncherActivity : AppCompatActivity() {
 
         val id = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
         val service = ArTranslatorService()
-        thread {
-            if(service.checkDevices(id)) {
-                val activityMsg = Message()
-                activityMsg.what = START_MAIN_ACTIVITY
-                handler.sendMessage(activityMsg)
-            } else {
-                val intent = Intent(this,AccessDeniedActivity::class.java)
-                startActivity(intent)
-                finish()
+
+        if (insiderEnv) {
+            thread {
+                if(service.checkDevices(id)) {
+                    val activityMsg = Message()
+                    activityMsg.what = START_MAIN_ACTIVITY
+                    handler.sendMessage(activityMsg)
+                } else {
+                    val intent = Intent(this,AccessDeniedActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
             }
+        } else {
+            val activityMsg = Message()
+            activityMsg.what = START_MAIN_ACTIVITY
+            handler.sendMessageDelayed(activityMsg,1500)
         }
 
     }

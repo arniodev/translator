@@ -1,6 +1,7 @@
 package com.arniodev.translator.service
 
 import android.util.Log
+import com.arniodev.translator.BuildConfig
 import com.arniodev.translator.`interface`.ArTranslatorInterface
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -9,7 +10,7 @@ import retrofit2.create
 
 class ArTranslatorService {
 
-    private val BASE_URL = "https://cdn.pai233.top/"
+    private val BASE_URL = "https://service.translator.arniodev.com/"
     private val interceptor = HttpLoggingInterceptor { message ->
         Log.d(
             "ArT_requestBody",
@@ -59,6 +60,33 @@ class ArTranslatorService {
         } else {
             null
         }
+    }
+
+    fun checkUpdate(): Boolean {
+        val request = service.getVersionCode()
+        val response = request.execute()
+        return if(response.isSuccessful) {
+            response.body()!! >= BuildConfig.VERSION_CODE
+
+        } else {
+            false
+        }
+    }
+
+    fun getVersionName(): String {
+        val request = service.getVersionName()
+        val response = request.execute()
+        return if(response.isSuccessful) {
+            response.body()?.string()!!
+        } else ""
+    }
+
+    fun getChangelog(lang: String): String {
+        val request = service.getChangelog(lang)
+        val response = request.execute()
+        return if(response.isSuccessful) {
+            response.body()?.string()!!
+        } else ""
     }
 
 }

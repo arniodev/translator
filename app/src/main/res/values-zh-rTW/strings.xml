@@ -58,4 +58,6 @@
     <string name="access_denied">無權限</string>
     <string name="try2swipe">嘗試左右滑動這裡！</string>
     <string name="got_it">好！</string>
+    <string name="EULA">用戶合約</string>
+    <string name="contributor">貢獻者</string>
 </resources>

@@ -108,13 +108,13 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = HomepageAdapter(homepageList)
 
         val content = SpannableStringBuilder(getString(R.string.try2swipe))
-        content.setSpan(AbsoluteSizeSpan(16, true), 0, content.length, Spanned.SPAN_INCLUSIVE_INCLUSIVE)
+        content.setSpan(AbsoluteSizeSpan(11, true), 0, content.length, Spanned.SPAN_INCLUSIVE_INCLUSIVE)
 
         MaterialShowcaseView.Builder(this)
             .setTarget(viewPager)
             .setContentText(content)
             .setDelay(500)
-            .singleUse("viewPager-LoR-16sp")
+            .singleUse("Swiping-LoR-11sp")
             .setDismissOnTouch(true)
             .setDismissOnTargetTouch(true)
             .show()

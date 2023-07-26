@@ -63,13 +63,14 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/ic_launcher_foreground"
+                            android:src="@mipmap/ic_launcher_round"
                             android:id="@+id/icon_view"
                             android:layout_gravity="center_vertical"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
                             android:orientation="vertical"
                             android:gravity="center_vertical">
                             <TextView
@@ -91,7 +92,7 @@
                 </RelativeLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="128dp"
+                    android:layout_height="245dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -127,6 +128,62 @@
                                 android:layout_marginStart="10dp"
                                 android:textColor="@color/white"
                                 android:text="@string/check_update"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/eulaBox"
+                            android:background="@drawable/item_background">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/document"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:textColor="@color/white"
+                                android:text="@string/EULA"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/contributorBox"
+                            android:background="@drawable/item_background">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/dev"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:textColor="@color/white"
+                                android:text="@string/contributor"
                                 android:textSize="12sp" />
 
                         </LinearLayout>
