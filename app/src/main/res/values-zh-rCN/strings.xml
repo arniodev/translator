@@ -60,4 +60,8 @@
     <string name="got_it">了解！</string>
     <string name="EULA">用户协议</string>
     <string name="contributor">贡献者</string>
+    <string name="qq_group">QQ群</string>
+    <string name="scan_with_qq">使用QQ扫码</string>
+    <string name="arnio_dev_proj">Arnio Dev的作品</string>
+    <string name="eula_content">1</string>
 </resources>

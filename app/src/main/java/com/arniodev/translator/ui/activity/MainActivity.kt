@@ -124,16 +124,12 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
+        val newPrefs = getSharedPreferences("config", MODE_PRIVATE)
+
         if(changeLang) {
             val adapter = viewPager.adapter as HomepageAdapter
-
-            val newPrefs = getSharedPreferences("config", MODE_PRIVATE)
             val newFromLang = newPrefs.getString("fromLang","zh-CN")!!
             val newToLang = newPrefs.getString("toLang","en")!!
-            val newEngine = newPrefs.getString("engine","DeepL")!!
-
-            val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
-            poweredByView.text = getString(LangUtils.getEnginePoweredBy(newEngine))
 
             setNewLang(newFromLang,newToLang)
 
@@ -145,6 +141,10 @@ class MainActivity : AppCompatActivity() {
 
             changeLang = false
         }
+
+        val poweredByView = findViewById<View>(R.id.powered_by_who) as TextView
+        val newEngine = newPrefs.getString("engine","DeepL")!!
+        poweredByView.text = getString(LangUtils.getEnginePoweredBy(newEngine))
     }
 
     private fun setNewLang(fromLang: String, toLang: String) {

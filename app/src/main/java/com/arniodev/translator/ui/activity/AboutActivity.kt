@@ -23,6 +23,8 @@ class AboutActivity : AppCompatActivity() {
         val logoView = findViewById<ImageView>(R.id.logo)
         val checkUpdateView = findViewById<View>(R.id.checkUpdateBox)
         val contactUsView = findViewById<View>(R.id.contactUsView)
+        val contributorView = findViewById<View>(R.id.contributorBox)
+
         val versionView = findViewById<TextView>(R.id.versionView)
         versionView.text = BuildConfig.VERSION_NAME
 
@@ -50,11 +52,15 @@ class AboutActivity : AppCompatActivity() {
         }
 
         contactUsView.setOnClickListener {
-            Toast.makeText(this,R.string.service_unavailable,Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,QQGroupActivity::class.java))
         }
 
         checkUpdateView.setOnClickListener {
             Toast.makeText(this,R.string.service_unavailable,Toast.LENGTH_SHORT).show()
+        }
+
+        contributorView.setOnClickListener {
+            startActivity(Intent(this,ContributorActivity::class.java))
         }
 
     }
