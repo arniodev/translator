@@ -24,6 +24,7 @@ class AboutActivity : AppCompatActivity() {
         val checkUpdateView = findViewById<View>(R.id.checkUpdateBox)
         val contactUsView = findViewById<View>(R.id.contactUsView)
         val contributorView = findViewById<View>(R.id.contributorBox)
+        val eulaBox = findViewById<View>(R.id.eulaBox)
 
         val versionView = findViewById<TextView>(R.id.versionView)
         versionView.text = BuildConfig.VERSION_NAME
@@ -61,6 +62,10 @@ class AboutActivity : AppCompatActivity() {
 
         contributorView.setOnClickListener {
             startActivity(Intent(this,ContributorActivity::class.java))
+        }
+
+        eulaBox.setOnClickListener {
+            startActivity(Intent(this,EulaActivity::class.java))
         }
 
     }

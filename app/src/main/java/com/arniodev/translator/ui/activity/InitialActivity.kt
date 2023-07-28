@@ -17,7 +17,7 @@ class InitialActivity : AppCompatActivity() {
     private val SHOW_EXAMPLE = 0x0004
     private val SHOW_TAP_BUTTON = 0x0002
     private val  SHOW_BACK_BUTTON = 0x0003
-    private lateinit var _CONTEXT: Context
+    //private lateinit var _CONTEXT: Context
     private val handler = object : Handler(Looper.getMainLooper()){
 
         override fun handleMessage(msg: Message) {
@@ -33,7 +33,7 @@ class InitialActivity : AppCompatActivity() {
                 }
                 SHOW_TAP_BUTTON -> {
                     tapView.setOnClickListener {
-                        val intent = Intent(_CONTEXT, PrivacyActivity::class.java)
+                        val intent = Intent(this@InitialActivity, PrivacyActivity::class.java)
                         startActivity(
                             intent, ActivityOptions.makeSceneTransitionAnimation(
                                 this@InitialActivity, findViewById<View>(
@@ -63,9 +63,9 @@ class InitialActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial)
 
-        if(!::_CONTEXT.isInitialized) {
-            _CONTEXT = this
-        }
+//        if(!::_CONTEXT.isInitialized) {
+//            _CONTEXT = this
+//        }
 
         val exampleMsg = Message()
         exampleMsg.what = SHOW_EXAMPLE

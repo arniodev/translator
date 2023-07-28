@@ -34,7 +34,7 @@ class PrivacyActivity : AppCompatActivity() {
             finish()
         }
         agreePrivacyView.setOnClickListener {
-            val intent = Intent(applicationContext, EngineChoosingActivity::class.java)
+            val intent = Intent(applicationContext, EulaActivity::class.java)
             intent.putExtra("init",true)
             startActivity(intent)
             finish()
