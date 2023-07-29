@@ -37,7 +37,7 @@ interface ArTranslatorInterface {
         //"Accept-Encoding: gzip,br",
         "Content-Type: */*")
     @GET("/versionCode")
-    fun getVersionCode(): Call<Int>
+    fun getVersionCode(): Call<ResponseBody>
 
     @Headers("User-Agent: ArTranslator/11.45.14",
         "Accept: */*",

@@ -13,10 +13,11 @@ import com.arniodev.translator.R
 import com.arniodev.translator.adapter.HomepageAdapter
 import com.arniodev.translator.data.HomepageItem
 import com.arniodev.translator.utils.LangUtils
-import kotlinx.coroutines.*
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView
 import android.text.style.AbsoluteSizeSpan
 import android.text.Spanned
+import com.arniodev.translator.service.ArTranslatorService
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,26 +30,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var homepageList: MutableList<HomepageItem>
 
-    private fun configChecker() {
-        val prefs = getSharedPreferences("config", MODE_PRIVATE)
-        val configured = prefs.getBoolean("configured",false)
-
-        Log.d("ArT",configured.toString())
-
-        if(!configured) {
-            val intent = Intent(this, InitialActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-    }
-
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //configChecker()
+
         setContentView(R.layout.activity_main)
 
-        configChecker()
+        val service = ArTranslatorService()
+
         prefs = getSharedPreferences("config", MODE_PRIVATE)
         val engine = prefs.getString("engine","DeepL")!!
         fromLang = prefs.getString("fromLang","zh-CN")!!
@@ -114,10 +104,16 @@ class MainActivity : AppCompatActivity() {
             .setTarget(viewPager)
             .setContentText(content)
             .setDelay(500)
-            .singleUse("Swiping-LoR-11sp")
+            .singleUse("10086001")
             .setDismissOnTouch(true)
             .setDismissOnTargetTouch(true)
             .show()
+
+        thread {
+            if(service.checkUpdate()) {
+                Log.d("ArT","UPDATE")
+            }
+        }
 
     }
 

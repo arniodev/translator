@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.provider.Settings
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,24 @@ class LauncherActivity : AppCompatActivity() {
     private val SHOW_ICON = 0x0000
     private val START_MAIN_ACTIVITY = 0x0002
 
+    private fun configChecker() {
+        val prefs = getSharedPreferences("config", MODE_PRIVATE)
+        val configured = prefs.getBoolean("configured",false)
+
+        Log.d("ArT",configured.toString())
+
+        if(!configured) {
+            val intent = Intent(this, InitialActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+    }
+
     private val handler = object : Handler(Looper.getMainLooper()){
 
         override fun handleMessage(msg: Message) {
@@ -35,9 +54,7 @@ class LauncherActivity : AppCompatActivity() {
                 }
 
                 START_MAIN_ACTIVITY -> {
-                    val intent = Intent(applicationContext, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    configChecker()
                 }
             }
         }

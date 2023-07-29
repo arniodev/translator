@@ -66,8 +66,9 @@ class ArTranslatorService {
         val request = service.getVersionCode()
         val response = request.execute()
         return if(response.isSuccessful) {
-            response.body()!! >= BuildConfig.VERSION_CODE
-
+            val newV = response.body()?.string()?.dropLast(1)?.toInt()!!
+            Log.d("ArT",newV.toString())
+            newV >= BuildConfig.VERSION_CODE
         } else {
             false
         }
