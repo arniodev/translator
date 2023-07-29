@@ -57,7 +57,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         checkUpdateView.setOnClickListener {
-            Toast.makeText(this,R.string.service_unavailable,Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,CheckUpdateActivity::class.java))
         }
 
         contributorView.setOnClickListener {
