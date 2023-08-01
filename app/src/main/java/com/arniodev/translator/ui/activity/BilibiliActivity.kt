@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.View
 import com.arniodev.translator.R
 
-class QQGroupActivity : AppCompatActivity() {
+class BilibiliActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_qqgroup)
+        setContentView(R.layout.activity_bilibili)
 
         val backBtnView = findViewById<View>(R.id.back_btn)
         val switchView = findViewById<View>(R.id.switch_one)
@@ -18,8 +18,9 @@ class QQGroupActivity : AppCompatActivity() {
         }
 
         switchView.setOnClickListener {
-            startActivity(Intent(this,BilibiliActivity::class.java))
+            startActivity(Intent(this,QQGroupActivity::class.java))
             finish()
         }
+
     }
 }

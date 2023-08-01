@@ -47,7 +47,8 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:animateLayoutChanges="true"
-            android:id="@+id/engine_view">
+            android:id="@+id/info_view"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,6 +107,27 @@
             </LinearLayout>
 
         </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/loadingView">
+            <ProgressBar
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/pBar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="@string/fetching_update"
+                android:id="@+id/status"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

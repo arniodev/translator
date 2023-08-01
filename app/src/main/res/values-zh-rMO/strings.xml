@@ -71,4 +71,7 @@
     <string name="new_ver">新版本：</string>
     <string name="updatelog">更新日誌：</string>
     <string name="loading">正在載入中…</string>
+    <string name="bilibili">Bilibili</string>
+    <string name="scan_with_bili">使用Bilibili掃碼</string>
+    <string name="fetching_update">正在取得更新...</string>
 </resources>

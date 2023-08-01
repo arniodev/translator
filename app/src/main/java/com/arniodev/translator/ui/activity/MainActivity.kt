@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
             if(service.checkUpdate()) {
                 runOnUiThread {
                     startActivity(Intent(this,NewVersionActivity::class.java))
-                    finish()
+                    // finish()
                 }
             }
         }
