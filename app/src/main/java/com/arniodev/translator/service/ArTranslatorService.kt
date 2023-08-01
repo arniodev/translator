@@ -78,15 +78,19 @@ class ArTranslatorService {
         val request = service.getVersionName()
         val response = request.execute()
         return if(response.isSuccessful) {
-            response.body()?.string()!!
+            response.body()?.string()?.dropLast(1)!!
         } else ""
     }
 
     fun getChangelog(lang: String): String {
-        val request = service.getChangelog(lang)
+        val lid = when(lang) {
+            "zh" -> "zh"
+            else -> "default"
+        }
+        val request = service.getChangelog(lid)
         val response = request.execute()
         return if(response.isSuccessful) {
-            response.body()?.string()!!
+            response.body()?.string()?.dropLast(1)!!
         } else ""
     }
 

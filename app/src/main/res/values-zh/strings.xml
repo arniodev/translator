@@ -67,4 +67,8 @@
     <string name="eula_hint">在使用本应用程序之前，请您仔细阅读最终用户许可协议（EULA）。EULA规定了您使用本应用程序的条件和限制。如果您不同意这些条款，请不要使用本应用程序。通过使用本应用程序，表示您同意遵守EULA中的所有条款和条件。</string>
     <string name="checking_update">正在检查更新...</string>
     <string name="up2date">当前已是最新版本</string>
+    <string name="new_update">发现新版本</string>
+    <string name="new_ver">新版本：</string>
+    <string name="updatelog">更新日志：</string>
+    <string name="loading">正在加载中...</string>
 </resources>

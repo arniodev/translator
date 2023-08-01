@@ -73,6 +73,8 @@ class LauncherActivity : AppCompatActivity() {
 //        configuration.setLocale(locale)
 //        this.createConfigurationContext(configuration)
 
+        Log.d("ArT",Resources.getSystem().configuration.locales[0].language)
+
         AppCenter.start(
             application, "034c8f4d-7355-4a6c-943f-1f9103961d1d",
             Analytics::class.java, Crashes::class.java

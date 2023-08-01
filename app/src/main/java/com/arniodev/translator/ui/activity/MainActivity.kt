@@ -111,7 +111,10 @@ class MainActivity : AppCompatActivity() {
 
         thread {
             if(service.checkUpdate()) {
-                Log.d("ArT","UPDATE")
+                runOnUiThread {
+                    startActivity(Intent(this,NewVersionActivity::class.java))
+                    finish()
+                }
             }
         }
 

@@ -67,5 +67,9 @@
     <string name="eula_hint">Before using this application, please read the End User License Agreement (EULA) carefully. The EULA sets forth the terms and conditions under which you may use this application. If you do not agree to these terms, please do not use this application. By using this application, you agree to comply with all the terms and conditions set forth in the EULA.</string>
     <string name="checking_update">Checking Update...</string>
     <string name="up2date">The current version is up-to-date.</string>
+    <string name="new_update">New Update</string>
+    <string name="new_ver">New version:&#32;</string>
+    <string name="updatelog">Update Log:</string>
+    <string name="loading">Loading...</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
