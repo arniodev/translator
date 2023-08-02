@@ -62,7 +62,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@mipmap/ic_launcher_round"
+                            android:src="@drawable/launcher_round"
                             android:id="@+id/icon_view"
                             android:layout_gravity="center_vertical"/>
                         <LinearLayout
