@@ -11,6 +11,12 @@ class EulaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eula)
         val agreeView = findViewById<View>(R.id.agreeView)
+
+        val backBtnView = findViewById<View>(R.id.back_btn)
+        backBtnView.setOnClickListener {
+            finish()
+        }
+
         agreeView.setOnClickListener {
             if(intent.getBooleanExtra("init",false)){
                 val intent = Intent(this,EngineChoosingActivity::class.java)

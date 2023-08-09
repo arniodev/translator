@@ -74,5 +74,7 @@
     <string name="bilibili">Bilibili</string>
     <string name="scan_with_bili">Scan with Bilibili</string>
     <string name="fetching_update">Fetching Update...</string>
+    <string name="close_the_app">Close the APP</string>
+    <string name="Tap_here_to_close">Tap here to close</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

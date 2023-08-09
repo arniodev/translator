@@ -91,6 +91,13 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this,AboutActivity::class.java)
                 startActivity(intent)
                 // finish()
+            },
+            HomepageItem(
+                R.drawable.close,
+                getString(R.string.close_the_app),
+                getString(R.string.Tap_here_to_close)
+            ){
+                finish()
             }
         )
 

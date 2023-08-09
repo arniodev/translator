@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -25,6 +26,11 @@ class CheckUpdateActivity : AppCompatActivity() {
         val statusView = findViewById<TextView>(R.id.status)
         val doneView = findViewById<ImageView>(R.id.doneView)
         pBarView.indeterminateDrawable = Wave()
+
+        val backBtnView = findViewById<View>(R.id.back_btn)
+        backBtnView.setOnClickListener {
+            finish()
+        }
 
         thread {
             if(service.checkUpdate()){

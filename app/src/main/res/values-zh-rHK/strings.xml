@@ -74,4 +74,6 @@
     <string name="bilibili">Bilibili</string>
     <string name="scan_with_bili">使用Bilibili掃碼</string>
     <string name="fetching_update">正在取得更新...</string>
+    <string name="close_the_app">关闭应用程式</string>
+    <string name="Tap_here_to_close">点击此处</string>
 </resources>

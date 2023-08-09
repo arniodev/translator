@@ -34,6 +34,11 @@ class NewVersionActivity : AppCompatActivity() {
 
         pBarView.indeterminateDrawable = Wave()
 
+        val backBtnView = findViewById<View>(R.id.back_btn)
+        backBtnView.setOnClickListener {
+            finish()
+        }
+
         thread {
             val newVerName = service.getVersionName()
             runOnUiThread {

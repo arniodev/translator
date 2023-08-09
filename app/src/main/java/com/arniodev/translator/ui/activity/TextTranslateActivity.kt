@@ -68,6 +68,11 @@ class TextTranslateActivity : AppCompatActivity() {
             _CONTEXT = this
         }
 
+        val backBtnView = findViewById<View>(R.id.back_btn_layout)
+        backBtnView.setOnClickListener {
+            finish()
+        }
+
         val prefs = getSharedPreferences("config", MODE_PRIVATE)
         val googleTranslate = GoogleTranslateService()
         val deeplTranslate = DeepLTranslateService()
@@ -117,10 +122,8 @@ class TextTranslateActivity : AppCompatActivity() {
         })
 
         editTextView.setOnEditorActionListener { _, i, _ ->
-            if(i == EditorInfo.IME_ACTION_DONE || i == EditorInfo.IME_ACTION_GO || i == EditorInfo.IME_ACTION_PREVIOUS ||
-                    i == EditorInfo.IME_ACTION_NEXT || i == EditorInfo.IME_ACTION_SEND || i == EditorInfo.IME_ACTION_SEARCH || i == EditorInfo.IME_ACTION_UNSPECIFIED) {
+            if(i == EditorInfo.IME_ACTION_DONE || i == EditorInfo.IME_ACTION_GO || i == EditorInfo.IME_ACTION_SEND || i == EditorInfo.IME_ACTION_SEARCH) {
                 fabView.performClick()
-                true
             }
             false
         }

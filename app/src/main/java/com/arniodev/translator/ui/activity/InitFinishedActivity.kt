@@ -24,5 +24,10 @@ class InitFinishedActivity : AppCompatActivity() {
 
             finish()
         }
+
+        val backBtnView = findViewById<View>(R.id.back_btn)
+        backBtnView.setOnClickListener {
+            finish()
+        }
     }
 }
