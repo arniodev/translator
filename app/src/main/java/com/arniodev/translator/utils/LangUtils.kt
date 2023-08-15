@@ -9,6 +9,10 @@ object LangUtils {
         "zh-CN" -> R.string.zh_CN
         "en" -> R.string.en
         "ja" -> R.string.ja
+        "ko" -> R.string.ko
+        "ru" -> R.string.ru
+        "fr" -> R.string.fr
+        "vi" -> R.string.vi
         else -> R.string.en
     }
 
@@ -25,6 +29,9 @@ object LangUtils {
                 "zh-CN" -> "ZH"
                 "en" -> "EN"
                 "ja" -> "JA"
+                "ko" -> "KO"
+                "ru" -> "RU"
+                "fr" -> "FR"
                 else -> "EN"
             }
         }
@@ -33,6 +40,9 @@ object LangUtils {
                 "zh-CN" -> "ZH"
                 "en" -> "EN"
                 "ja" -> "JA"
+                "ko" -> "KO"
+                "ru" -> "RU"
+                "fr" -> "FR"
                 else -> "EN"
             }
         }
@@ -51,6 +61,22 @@ object LangUtils {
             LanguageItem(
                 R.string.ja,
                 "ja"
+            ),
+            LanguageItem(
+                R.string.ko,
+                "ko"
+            ),
+            LanguageItem(
+                R.string.ru,
+                "ru"
+            ),
+            LanguageItem(
+                R.string.fr,
+                "fr"
+            ),
+            LanguageItem(
+                R.string.vi,
+                "vi"
             )
         )
         "DeepL" -> listOf(
@@ -65,6 +91,18 @@ object LangUtils {
             LanguageItem(
                 R.string.ja,
                 "ja"
+            ),
+            LanguageItem(
+                R.string.ko,
+                "ko"
+            ),
+            LanguageItem(
+                R.string.ru,
+                "ru"
+            ),
+            LanguageItem(
+                R.string.fr,
+                "fr"
             )
         )
         else -> listOf(
@@ -79,6 +117,18 @@ object LangUtils {
             LanguageItem(
                 R.string.ja,
                 "ja"
+            ),
+            LanguageItem(
+                R.string.ko,
+                "ko"
+            ),
+            LanguageItem(
+                R.string.ru,
+                "ru"
+            ),
+            LanguageItem(
+                R.string.fr,
+                "fr"
             )
         )
     }

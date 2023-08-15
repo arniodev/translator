@@ -76,4 +76,8 @@
     <string name="fetching_update">正在取得更新...</string>
     <string name="close_the_app">关闭应用程式</string>
     <string name="Tap_here_to_close">点击此处</string>
+    <string name="ru">俄語</string>
+    <string name="ko">韓語</string>
+    <string name="fr">法語</string>
+    <string name="vi">越南語</string>
 </resources>

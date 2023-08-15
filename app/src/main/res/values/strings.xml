@@ -34,7 +34,7 @@
     <string name="hello_bro">Hello (≧∀≦)ゞ</string>
     <string name="donate_descr">We work on this software so hard. We\'ll be happy if you buy us a coffee! Thanks for supporting!</string>
     <string name="text_translate">Text Translate</string>
-    <string name="input_text">Type texts to translate here...</string>
+    <string name="input_text">Type to translate here...</string>
     <string name="translate_result">Translate Result...</string>
     <string name="cannot_be_empty">You haven\'t type anything yet!</string>
     <string name="network_error">Network Error</string>
@@ -76,5 +76,9 @@
     <string name="fetching_update">Fetching Update...</string>
     <string name="close_the_app">Close the APP</string>
     <string name="Tap_here_to_close">Tap here to close</string>
+    <string name="ko">Korean</string>
+    <string name="ru">Russian</string>
+    <string name="fr">French</string>
+    <string name="vi">Vietnamese</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
