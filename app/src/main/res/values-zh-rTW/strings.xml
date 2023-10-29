@@ -80,4 +80,5 @@
     <string name="ko">韓語</string>
     <string name="fr">法語</string>
     <string name="vi">越南語</string>
+    <string name="result">翻譯結果</string>
 </resources>

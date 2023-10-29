@@ -80,5 +80,6 @@
     <string name="ru">Russian</string>
     <string name="fr">French</string>
     <string name="vi">Vietnamese</string>
+    <string name="result">Result</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

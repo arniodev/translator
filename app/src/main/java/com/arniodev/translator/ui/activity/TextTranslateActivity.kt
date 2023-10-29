@@ -2,6 +2,7 @@ package com.arniodev.translator.ui.activity
 
 //import com.arniodev.translator.data.GoogleTranslateResult
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -134,6 +135,12 @@ class TextTranslateActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.fold_btn).setOnClickListener {
             drawer.state = BottomSheetBehavior.STATE_COLLAPSED
+        }
+
+        findViewById<TextView>(R.id.result_view).setOnClickListener {
+            val intent = Intent(this,ResultActivity::class.java)
+            intent.putExtra("result",translateResult)
+            startActivity(intent)
         }
 
         fabView.setOnClickListener {

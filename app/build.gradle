@@ -13,8 +13,8 @@ android {
         applicationId "com.arniodev.translator"
         minSdk 26
         targetSdk 33
-        versionCode 11
-        versionName "v1.0.1-release"
+        versionCode 12
+        versionName "v1.0.2-release"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

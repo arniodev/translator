@@ -16,6 +16,9 @@
         android:theme="@style/Theme.ArTranslator"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.BilibiliActivity"
             android:exported="false">
             <meta-data
